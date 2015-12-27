@@ -1,0 +1,127 @@
+<html>
+<head>
+	<title></title>
+	<!--
+	@author xubin
+	@email xubin1625@sina.com
+	@date  2015-12-27
+	-->
+	<style type="text/css" >
+	/* Reset */
+	html, body, form, p, h1, h2, h3, h4, h5, h6, dl, ul, ol, li, dt, dd, select,header { margin: 0; padding: 0;}
+	body, select, input, option { color: #333; font: 16px/1.5 "Microsoft YaHei",Arial; -webkit-text-size-adjust: none; }
+	ul, ol, li { list-style-type: none; }
+	em, i { font-style: normal; }
+	a, a:visited { color: #457fe3; }
+	a { text-decoration: none; }
+	a img { border: 0 none; }
+
+	/* header */
+	body { background: #170129;}
+
+	section { position: relative; margin:78px 19px 0; padding:0 0 30px; border:2px solid #fff; border-radius: 30px; box-shadow: 0 0 11px #ff00ea inset, 0 0 11px #ff00ea;}
+
+	/* sec-3 */
+	.look-rules-btn {display: block; width:160px; height: 52px; padding:0 10px; margin:14px auto 0; border:2px solid #157e8f; font-size: 28px; color: #19edf2; line-height: 52px; text-align: center; border-radius: 27px;}
+
+	.drawbox { position: relative; width:544px; height: 420px; margin:22px auto 0;}
+	.draw-list li,
+	.drawbox .draw-btn { position: absolute; width:142px; height: 97px; padding:10px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAAB1CAMAAAD6F8q+AAACTFBMVEUiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYkADokAToiADYnAz4nAD4nAEEpBEEiADYiADYiADYiADYiADYiADYiADYiADZZIZFVAI9VAI5PAJFaIpJbI5VaAJVMAJZcI5ZoALlxMLlvAMF2M8FgAM19OM18AM1gAM19OM2MAOdmAOiNQuiPQuuPQ+uKAOpoAOx6APCPQ+uQQ+ySRPBnAPiXR/iWAPhpAPyZSfyZSfxlAP9mAP9mAv9nAP9oAP9oA/9pAP9pAf9qAP9rAP9rCP9sAP9sCf9tAP9tCv9tC/9uAP9uCf9vAP9wAP9xAP9yAP9zAP90AP91AP92AP92GP93AP94AP94GP95AP96AP97AP97Hv98AP99AP99If9+AP9/AP+AAP+BAP+CAP+DAP+EAP+FAP+GAP+HAP+HL/+IAP+IL/+IMP+JAP+JMf+KAP+NAP+OAP+PAP+QAP+SAP+TAP+UAP+ZSP+aSP+aSf+bSv+aAP+XAP+YAP+WAP+c2Dp7AAAAf3RSTlMAAQIDBAUGBwgJCgsNDg8QERITFBUWGBkbHB4fICIjJCUoKy0uLzAzNDc4OTo7PEBDSUpMT1JTVVZXWFlbYWdoamtucHV2eXt8fYWGh4yMkJKSk5OXmJ2eoaKkpr+/v8DAwsLDw9fY29vl5eXm5vT19fX19ff39/f3/Pz8/f3+/wKxgQAABYtJREFUeF7E011rglAcx/GOHmfZcZpYhqkrLbJwWtijq2gW5iKIICIaG9Bt0E2Xvbk9vLG5Chbb/c7nDfy//OAf+wEAQZAQUhR1g010HEKSIACI/QEACSk6kUQsx/F8ChOe5zgWJRM0BcnflVEgzSBezGRlRVU17Q4LTVNVRc5mRB4xdBR5HUhEgawg5fJ6yaxULeseE8uqVsySns9JAhtFEuCqMI5SkqqX7Vq90Wx3vQdMvG672ajX7LKuSil01fhdKMoF03G9/nA0DiZh+IRFGE6C8WjY91zHLMgiikPiMmJUmFYM2+09BtP5crXePGOzWa+W82kw7Lm2oaSjRnD+FBqJStFpDcLFdrc/vmF23O+2i3DQcoqKiGgSnEZkBNlwOv7s5fB59n7y8a/ONy8Bh9eZ33EMWWBOM5L0rVSwW/4XMXS3kjAch3F8TkvEFYKilQg2QHY0rUWAqGiBSCmC0LGAiARBJwl4BYIIoe6NyRwblls5hOjNurl+/znqCto+N/B9eGqdte0LfLsAdde2Tu3slD6M7fq91onhBMUUqu23jXfk49fnv/trWWl7RrtaYKhEGN3o2SJiZDpXaS4R01ytVi/g1QWoC3nTXCLNSi5NxohtD4b7Q3GKKTW6C0TXDeMJPG8sHWLnUNkwdH2BdBslhoqH/DiGByJJOltuzYCiqKqmzefzB+TRUVYS0pqmqooyA61ylk5GAjjmDUbJTP7iWgCiKElTWUZjXQFhWZ5KkigK4OYynyGjQS/mI/ZSR8X67Wg0Gk9YluN4XhCB5DgRCDzPcSw7GcOcu3rxOLVP+DDfzgF1cn7V6/f7g8FweA9LYaqFc9APcXSzgiAQhWFYIN1Fto3UbZWziwJdVpYX0P+tBDPMMCgRBHnDzQdzMCBo53w3cB7eg3ugGdvr+Xw8DOd+WC8mo37P8wfj6XJzFEIoVVV1DSac3Q868Oq6qpQyoNN2OR0PfEOMZqvizLmQShujTYl1yjOzAY1QKyk4vxSreQRiGKXZ7sq5lFq3QgcZv4xaS8n5dZelUeh7QRin2f5mI5Lw7WRktBlv+4zFYeAFw5jlREREEjYdj4zISMScxUMQE5aXIOLPiEhCN0ZkxKdBLHOWfBHtnyli42A2I336J7GN2DhZm/Ef0Qo/7NohDsAgFETBq+NIMBgOXASOFAf8tLMnGLPutaMbxgUxTcR2eBMxTcTxli68SezG8ZdXYr1PrCtiiUIsG4mIORIxf5mIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiPirCAYxfjMWv7yL3y9Gq0Afoa4CHXJraQf/iuTBv64btjq+ZfCtjm+Ero6H7THoG3x7DLqhewxgOzVmDr6dGjNhOzVY+WW1zd0i1g3wfhcAM2ewgiAQRdFP6wdCArcCCRIiCBVgEqQiWBRJfkCA4D4Mt+b8WnMf7yFC68m7nM0c7l2f98N3ebHvItZQf6UahRGQxvMQQirx2rM1JO7V8Y0aMTUYAWkWE//diRAzo8T3id0rMdi2qklzTI0eCRKcxnKn3NAhzZynjTqwwSYeYKiGOgMjbQ1I0wEgrQzCrB5UyB6g2JSeUqormRFrmw82ZsKy0zge25TipNqxfvy0z+pcaEhQIsbgkAsBFufq2X40TGyLkypm71rNLGsxe0c/ejMvws1ywX70aJlb/pwIfUss84mr7+znArhzRld/evFg5QZR8m+8JArcFV08+A5y4gH6uRHe/qFhkQN5bkRkWKi/t5sj4twIbKdvuA7s6Ruu6KdvIM4wERKXVdLQMzAyMTO3GrgzTKzMzUyMDPQ0lGTFhUAuZEQ9CUYYdBKMmoamto7ugAEdbU0NNdBJMMKIk2DQz9ORHPjzdCQR5+kMlVOJhsDZTgAErCNpQ5o2gAAAAABJRU5ErkJggg==) no-repeat; cursor: pointer;}
+	.draw-list .act { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAAB1CAMAAAD6F8q+AAAB+1BMVEUiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYkADgmATkiADYnADssAj4rAz0oAD0uAj8iADYiADYiADYiADYiADYiADYiADYiADaCI4NWAG2DJIRXAG6HGYJZAHCLEIKKKIpZAHCMEINtAIWxKqWyKqZtAIW6Mq5xAIq7Mq95AJLIE63IQb15AJLIE63lTNSIAKKJAKTmDr/oSNSKAKSKAKWMAKfqDsLvKs+RAKz3CMn3U+OTAK78CMyTAK6VALCWALCXALGYALG5ALu6ALu7ALy8ALzPAMPQAMPUAMTcAMfdAMbvAMzwAM3yAM3yAM70AM76AM/9AND9ANH/AMz/AM3/AM7/AM//AND/ANH/ANL/Asz/CM7/ENH/GdT/Itf/Ldv/N97/QeL/SeX/Uef/Vuk7iPRnAAAAgnRSTlMAAQIDBAUGBwgJCgsNDg8QERITFBUWGBkbHB4fICIjJCUoKy0uLzAzNDc4OTo7PEBDSUpMT1JTVVZXWFlbYWdqa25wdXZ5e3x9hYaHjIyQkpKSk5OXmJ2eoaKkpr6/v8DAwsLCw8PX19fY2tvb5eXl5ub09fX19ff39/f3/Pz8/f3+sFzkEwAAA/9JREFUeF7M09FqgmAYh/E+1Vn2meYsw9RNLbJwWlhWrhILcxEFQUS0sZNOxhgEAR12Odsuc9IGi+0C7HcD78Mf3sQvABAExTAcx69iEx3HMBRBAEj8AwCK4UQqDSmaZphsTBiGpimYThE4hv6tjAIJEjJcviCIkiTLN7GQZUkShUKeYyBJRJHngUgUSLF88VYt69WaYdzFxDBqVb2s3hZ5looiEXBeCLO8pFbMeqPZanfd+5i43Xar2aibFVXis/CsEcGSkBMU3bLdvjccBeMwfIhFGI6D0dDru7alKwIHkxjyM2JUmBM10+55wWS+XK03j7HZrFfL+STwerapibmoEXx/CgE5sWQ5g3Cx3e2PnzE77nfbRThwrJLIQQIFpxFJVtCsjj99OnxciMPz1O9YmsCSpxlRIsMrpuPP3t4vyOvMd0yFzxDoacRrSbcH05cvLR1UIN3bzlhDVhgUjIysPOJK+jbuCUsGGUhwt9FXEudhY2RgYheQ1jB2CKhePMhAdbCDsYa0ADsTAxOniIKelWvSokEHUl2t9BREOJkYmLnFlAxsPfMWDjpQ6GVroCTGzczAwiOhZmjvV7pg0IEqP3sjNUkeFgYWXikNE6fQ2vmDDjSEOploSPGyMLDyy2iaOYfNG4Qg3MVMU4afFehEWS1z1wgAu3NsBCAIBECQRGIoACxAPnaEWKAFoTDbdejA8IPbCvZV6LnPI6yiC+mqQ2Nx1JyC24x1MeU2NRZnyxKdNdZHKVqLRaJfxV1K11nsRXaKP1GkSJEiRYoUKVKkSJEiRYoUKVKkSJEixU8zBiEYdSIqGHXiqBNHnTjqRDQnzhyEYBg7cdSJo04cdeKsQQhGnTjqRLqCUSeOOhHNibMHIRh1Il4w6sRRJ446cdSJcwYhGFlOHHUibHX8lMHnwqnQ1fGwPQb9g8+JE6F7DMA7NazcovoGnxP7YDs1WPlltc1dIzoHnxM7oftdYLuGWicPNhdOboXuGoLtvappH2xObK8HMHNHKQBBURRFJ6iUf0m9lKQUhU+bJCip/Jmr0rteRuDuEZwJrGPtlQi2kuVS1UxjBZs4wIJ+1bRw7SmsAxRNaYBx1zJwHwFjNaWY1KAFhmk7zr/nncc2DUAbiEkV2RuhrEhkr/PRKapKXh/tlLmXoajME2X+sfphhZKq0Fn97+OBH+d1x891dR77z+PBPciJB6jnRji4evmFhkUO5LkRkWGhfl6uDohzI7CdvuEysKdvuGA7fYOBEeRGIXFZJQ09AyMTM3OrgTvDxMrczMTIQE9DSVZcCORCRtSTYIRBJ8GoaWhq6+gOGNDR1tRQA50EIww7CQbzPB3JgT9PRxJ+ns7QOZVo8J/tBAAkkLPP8bI7EQAAAABJRU5ErkJggg==);}
+	.draw-list table { width:100%; height: 100%; border-collapse: collapse; border-spacing: 0; border:0 none; text-align: center;}
+	.draw-list td { border:0 none; font-size: 24px; line-height: 30px; color: #fff; vertical-align: middle;}
+	.draw-list td em { font-size: 36px; color: #ffe300;}
+	.draw-list .draw-1 { top:31px; left: 26px;}
+	.draw-list .draw-2 { top:31px; left: 189px;}
+	.draw-list .draw-3 { top:31px; left: 353px;}
+	.draw-list .draw-4 { top:147px; left: 353px;}
+	.draw-list .draw-5 { top:268px; left: 353px;}
+	.draw-list .draw-6 { top:268px; left: 191px;}
+	.draw-list .draw-7 { top:268px; left: 25px;}
+	.draw-list .draw-8 { top:147px; left: 25px;}
+	.drawbox .draw-btn { top:147px; left: 191px; font-size: 32px; line-height: 82px; text-align: center; color: #ffe300; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAAB1CAMAAAD6F8q+AAAB+1BMVEUiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYiADYkADgmATkiADYnADssAj4rAz0oAD0uAj8iADYiADYiADYiADYiADYiADYiADYiADaCI4NWAG2DJIRXAG6HGYJZAHCLEIKKKIpZAHCMEINtAIWxKqWyKqZtAIW6Mq5xAIq7Mq95AJLIE63IQb15AJLIE63lTNSIAKKJAKTmDr/oSNSKAKSKAKWMAKfqDsLvKs+RAKz3CMn3U+OTAK78CMyTAK6VALCWALCXALGYALG5ALu6ALu7ALy8ALzPAMPQAMPUAMTcAMfdAMbvAMzwAM3yAM3yAM70AM76AM/9AND9ANH/AMz/AM3/AM7/AM//AND/ANH/ANL/Asz/CM7/ENH/GdT/Itf/Ldv/N97/QeL/SeX/Uef/Vuk7iPRnAAAAgnRSTlMAAQIDBAUGBwgJCgsNDg8QERITFBUWGBkbHB4fICIjJCUoKy0uLzAzNDc4OTo7PEBDSUpMT1JTVVZXWFlbYWdqa25wdXZ5e3x9hYaHjIyQkpKSk5OXmJ2eoaKkpr6/v8DAwsLCw8PX19fY2tvb5eXl5ub09fX19ff39/f3/Pz8/f3+sFzkEwAAA/9JREFUeF7M09FqgmAYh/E+1Vn2meYsw9RNLbJwWlhWrhILcxEFQUS0sZNOxhgEAR12Odsuc9IGi+0C7HcD78Mf3sQvABAExTAcx69iEx3HMBRBAEj8AwCK4UQqDSmaZphsTBiGpimYThE4hv6tjAIJEjJcviCIkiTLN7GQZUkShUKeYyBJRJHngUgUSLF88VYt69WaYdzFxDBqVb2s3hZ5looiEXBeCLO8pFbMeqPZanfd+5i43Xar2aibFVXis/CsEcGSkBMU3bLdvjccBeMwfIhFGI6D0dDru7alKwIHkxjyM2JUmBM10+55wWS+XK03j7HZrFfL+STwerapibmoEXx/CgE5sWQ5g3Cx3e2PnzE77nfbRThwrJLIQQIFpxFJVtCsjj99OnxciMPz1O9YmsCSpxlRIsMrpuPP3t4vyOvMd0yFzxDoacRrSbcH05cvLR1UIN3bzlhDVhgUjIysPOJK+jbuCUsGGUhwt9FXEudhY2RgYheQ1jB2CKhePMhAdbCDsYa0ADsTAxOniIKelWvSokEHUl2t9BREOJkYmLnFlAxsPfMWDjpQ6GVroCTGzczAwiOhZmjvV7pg0IEqP3sjNUkeFgYWXikNE6fQ2vmDDjSEOploSPGyMLDyy2iaOYfNG4Qg3MVMU4afFehEWS1z1wgAu3NsBCAIBECQRGIoACxAPnaEWKAFoTDbdejA8IPbCvZV6LnPI6yiC+mqQ2Nx1JyC24x1MeU2NRZnyxKdNdZHKVqLRaJfxV1K11nsRXaKP1GkSJEiRYoUKVKkSJEiRYoUKVKkSJEixU8zBiEYdSIqGHXiqBNHnTjqRDQnzhyEYBg7cdSJo04cdeKsQQhGnTjqRLqCUSeOOhHNibMHIRh1Il4w6sRRJ446cdSJcwYhGFlOHHUibHX8lMHnwqnQ1fGwPQb9g8+JE6F7DMA7NazcovoGnxP7YDs1WPlltc1dIzoHnxM7oftdYLuGWicPNhdOboXuGoLtvappH2xObK8HMHNHKQBBURRFJ6iUf0m9lKQUhU+bJCip/Jmr0rteRuDuEZwJrGPtlQi2kuVS1UxjBZs4wIJ+1bRw7SmsAxRNaYBx1zJwHwFjNaWY1KAFhmk7zr/nncc2DUAbiEkV2RuhrEhkr/PRKapKXh/tlLmXoajME2X+sfphhZKq0Fn97+OBH+d1x891dR77z+PBPciJB6jnRji4evmFhkUO5LkRkWGhfl6uDohzI7CdvuEysKdvuGA7fYOBEeRGIXFZJQ09AyMTM3OrgTvDxMrczMTIQE9DSVZcCORCRtSTYIRBJ8GoaWhq6+gOGNDR1tRQA50EIww7CQbzPB3JgT9PRxJ+ns7QOZVo8J/tBAAkkLPP8bI7EQAAAABJRU5ErkJggg==);}
+	</style>
+	<script type="text/javascript" src="./js/lottery.js"></script>
+</head>
+<body>
+<section id="sec_3" class="sec-3">
+	<div class="drawbox">
+		<ul class="draw-list" id='lottery'>
+			<li class="draw-1 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td><em>大锤</em><br/>购物卡</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-2 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td>去分享<br/>机会更大哦</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-3 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td><em>大锤</em><br/>购物卡</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-4 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td>一定是打开<br/>方式不对</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-5 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td><em>大锤</em><br/>购物卡</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-6 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td>别气馁<br/>再试试</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-7 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td><em>大锤</em><br/>购物卡</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="draw-8 lottery-unit">
+				<table>
+					<tbody>
+						<tr>
+							<td>手气<br/>不够好呀</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+		<div class="draw-btn" onclick="startLottery()" >点此抽奖</div>
+	</div>
+</section>
+</body>
+</html>
